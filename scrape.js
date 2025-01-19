@@ -1,10 +1,11 @@
-import puppeteer from 'puppeteer-extra';
-import StealthPlugin from 'puppeteer-extra-plugin-stealth';
-import csvWriter from 'csv-write-stream';
-import fs from 'fs';
-import chrome from 'chrome-aws-lambda';  // Import chrome-aws-lambda for headless Chromium support
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const csvWriter = require('csv-write-stream');
+const fs = require('fs');
+const chrome = require('chrome-aws-lambda');
 
 puppeteer.use(StealthPlugin());
+
 
 // Main handler function
 export default async function handler(req, res) {
