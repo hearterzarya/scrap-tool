@@ -80,7 +80,7 @@ export default async function handler(req, res) {
 
         // Generate CSV file
         console.log('Scraping completed. Generating CSV file...');
-        const filePath = './public/scraped_data.csv';  // For local or serverless deployments, ensure it's accessible
+        const filePath = './public/scraped_data.csv';
         const writer = csvWriter({
             headers: ['Name', 'Address', 'Phone', 'Website', 'Reviews', 'Rating', 'Email'],
         });
