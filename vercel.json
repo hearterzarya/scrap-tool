@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "Dockerfile",
-        "use": "@vercel/docker"
+        "src": "pages/api/scrape.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/scrape",
-        "dest": "/pages/api/scrape.js"
+        "src": "/scraped_data.csv",
+        "dest": "/public/scraped_data.csv"
       }
     ]
   }
